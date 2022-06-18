@@ -7,13 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C344890285DBC7600BB96E1 /* DateFormatter+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C34488F285DBC7600BB96E1 /* DateFormatter+Custom.swift */; };
+		4C34489A285E028D00BB96E1 /* MockingURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C344899285E028D00BB96E1 /* MockingURLProtocol.swift */; };
 		4CB9F80F285B7E1800DF6DD2 /* AppleRepositoriesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F80E285B7E1800DF6DD2 /* AppleRepositoriesApp.swift */; };
-		4CB9F811285B7E1800DF6DD2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F810285B7E1800DF6DD2 /* ContentView.swift */; };
 		4CB9F813285B7E1A00DF6DD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CB9F812285B7E1A00DF6DD2 /* Assets.xcassets */; };
 		4CB9F816285B7E1A00DF6DD2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CB9F815285B7E1A00DF6DD2 /* Preview Assets.xcassets */; };
 		4CB9F820285B7E1A00DF6DD2 /* AppleRepositoriesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F81F285B7E1A00DF6DD2 /* AppleRepositoriesTests.swift */; };
 		4CB9F82A285B7E1A00DF6DD2 /* AppleRepositoriesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F829285B7E1A00DF6DD2 /* AppleRepositoriesUITests.swift */; };
 		4CB9F82C285B7E1A00DF6DD2 /* AppleRepositoriesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F82B285B7E1A00DF6DD2 /* AppleRepositoriesUITestsLaunchTests.swift */; };
+		4CB9F83C285B7F0700DF6DD2 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F83B285B7F0700DF6DD2 /* Repository.swift */; };
+		4CB9F840285B81F500DF6DD2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F83F285B81F500DF6DD2 /* ContentView.swift */; };
+		4CB9F842285B827400DF6DD2 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F841285B827400DF6DD2 /* ItemView.swift */; };
+		4CB9F844285B8BA300DF6DD2 /* RepositoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB9F843285B8BA300DF6DD2 /* RepositoriesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C34488F285DBC7600BB96E1 /* DateFormatter+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Custom.swift"; sourceTree = "<group>"; };
+		4C344899285E028D00BB96E1 /* MockingURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockingURLProtocol.swift; sourceTree = "<group>"; };
 		4CB9F80B285B7E1800DF6DD2 /* AppleRepositories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleRepositories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CB9F80E285B7E1800DF6DD2 /* AppleRepositoriesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleRepositoriesApp.swift; sourceTree = "<group>"; };
-		4CB9F810285B7E1800DF6DD2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4CB9F812285B7E1A00DF6DD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CB9F815285B7E1A00DF6DD2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4CB9F81B285B7E1A00DF6DD2 /* AppleRepositoriesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppleRepositoriesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +50,10 @@
 		4CB9F825285B7E1A00DF6DD2 /* AppleRepositoriesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppleRepositoriesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CB9F829285B7E1A00DF6DD2 /* AppleRepositoriesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleRepositoriesUITests.swift; sourceTree = "<group>"; };
 		4CB9F82B285B7E1A00DF6DD2 /* AppleRepositoriesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleRepositoriesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4CB9F83B285B7F0700DF6DD2 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		4CB9F83F285B81F500DF6DD2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4CB9F841285B827400DF6DD2 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
+		4CB9F843285B8BA300DF6DD2 /* RepositoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +104,10 @@
 		4CB9F80D285B7E1800DF6DD2 /* AppleRepositories */ = {
 			isa = PBXGroup;
 			children = (
+				4CB9F83A285B7E9700DF6DD2 /* ViewModels */,
+				4CB9F839285B7E9100DF6DD2 /* Views */,
+				4CB9F838285B7E8B00DF6DD2 /* Models */,
 				4CB9F80E285B7E1800DF6DD2 /* AppleRepositoriesApp.swift */,
-				4CB9F810285B7E1800DF6DD2 /* ContentView.swift */,
 				4CB9F812285B7E1A00DF6DD2 /* Assets.xcassets */,
 				4CB9F814285B7E1A00DF6DD2 /* Preview Content */,
 			);
@@ -114,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				4CB9F81F285B7E1A00DF6DD2 /* AppleRepositoriesTests.swift */,
+				4C344899285E028D00BB96E1 /* MockingURLProtocol.swift */,
 			);
 			path = AppleRepositoriesTests;
 			sourceTree = "<group>";
@@ -125,6 +138,32 @@
 				4CB9F82B285B7E1A00DF6DD2 /* AppleRepositoriesUITestsLaunchTests.swift */,
 			);
 			path = AppleRepositoriesUITests;
+			sourceTree = "<group>";
+		};
+		4CB9F838285B7E8B00DF6DD2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4CB9F83B285B7F0700DF6DD2 /* Repository.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4CB9F839285B7E9100DF6DD2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4CB9F83F285B81F500DF6DD2 /* ContentView.swift */,
+				4CB9F841285B827400DF6DD2 /* ItemView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4CB9F83A285B7E9700DF6DD2 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4CB9F843285B8BA300DF6DD2 /* RepositoriesViewModel.swift */,
+				4C34488F285DBC7600BB96E1 /* DateFormatter+Custom.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +296,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CB9F811285B7E1800DF6DD2 /* ContentView.swift in Sources */,
+				4CB9F840285B81F500DF6DD2 /* ContentView.swift in Sources */,
 				4CB9F80F285B7E1800DF6DD2 /* AppleRepositoriesApp.swift in Sources */,
+				4CB9F842285B827400DF6DD2 /* ItemView.swift in Sources */,
+				4C344890285DBC7600BB96E1 /* DateFormatter+Custom.swift in Sources */,
+				4CB9F844285B8BA300DF6DD2 /* RepositoriesViewModel.swift in Sources */,
+				4CB9F83C285B7F0700DF6DD2 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C34489A285E028D00BB96E1 /* MockingURLProtocol.swift in Sources */,
 				4CB9F820285B7E1A00DF6DD2 /* AppleRepositoriesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

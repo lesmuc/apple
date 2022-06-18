@@ -6,31 +6,83 @@
 //
 
 import XCTest
+import Combine
+
 @testable import AppleRepositories
 
 class AppleRepositoriesTests: XCTestCase {
+    
+    var viewModel = RepositoriesViewModel()
+    
+    var cancellables = Set<AnyCancellable>()
+    
+    func testFetchItemsWithoutMocking() {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        let expectation = self.expectation(description: "Fetch real data from Github and check for filled items and undefined error.")
+        
+        URLProtocol.unregisterClass(MockingURLProtocol.self)
+        
+        viewModel
+            .$items
+            .sink { repositories in
+                
+                guard !repositories.isEmpty else { return }
+                
+                XCTAssertFalse(repositories.isEmpty)
+                XCTAssertNil(self.viewModel.error)
+                
+                expectation.fulfill()
+            }
+            .store(in: &cancellables)
+
+        viewModel.fetchItems()
+        
+        wait(for: [expectation], timeout: 5)
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+    func testFetchItemsWithInvalidLocalJson() {
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
+        let expectation = self.expectation(description: "Try to parse invalid local JSON and check for failed state.")
+        
+        MockingURLProtocol.data = "{\"id\": 1}".data(using: .utf8)
+        URLProtocol.registerClass(MockingURLProtocol.self)
+        
+        viewModel
+            .$loadingState
+            .sink { state in
+                
+                if state == .failed {
+                    XCTAssertTrue(self.viewModel.error != nil)
+                    expectation.fulfill()
+                }
+            }
+            .store(in: &cancellables)
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+        viewModel.fetchItems()
+        
+        wait(for: [expectation], timeout: 5)
     }
+    
+    func testFetchItemsWithMockedError() {
 
+        let expectation = self.expectation(description: "Try to fetch items but we have a mocked error.")
+        
+        MockingURLProtocol.error = RepositoriesViewModel.RequestError.failedRequest
+        URLProtocol.registerClass(MockingURLProtocol.self)
+        
+        viewModel
+            .$loadingState
+            .sink { state in
+                
+                if state == .failed {
+                    XCTAssertTrue(self.viewModel.error != nil)
+                    expectation.fulfill()
+                }
+            }
+            .store(in: &cancellables)
+
+        viewModel.fetchItems()
+        
+        wait(for: [expectation], timeout: 5)
+    }
 }
